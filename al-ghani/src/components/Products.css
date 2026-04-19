@@ -1,0 +1,141 @@
+.products { background: #fff; }
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+
+.filter-btn {
+  padding: 8px 22px;
+  border-radius: 30px;
+  border: 2px solid rgba(27,94,32,0.2);
+  background: transparent;
+  color: #1b5e20;
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.filter-btn:hover { border-color: #1b5e20; background: rgba(27,94,32,0.06); }
+.filter-btn.active { background: #1b5e20; color: #fff; border-color: #1b5e20; }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: var(--cream);
+  border-radius: 16px;
+  padding: 30px 22px 22px;
+  border: 1px solid rgba(0,0,0,0.07);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-img-wrap {
+  width: 100%;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.pc:hover .product-img {
+  transform: scale(1.05);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(27,94,32,0.12);
+  border-color: rgba(27,94,32,0.2);
+}
+
+.product-emoji { font-size: 2.8rem; margin-bottom: 10px; }
+
+.product-cat {
+  display: inline-block;
+  background: rgba(184,134,11,0.1);
+  color: #b8860b;
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  color: #0a3d12;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.product-ur {
+  font-size: 0.9rem;
+  color: #b8860b;
+  margin-bottom: 8px;
+}
+
+.product-desc {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0,0,0,0.07);
+  padding-top: 14px;
+}
+
+.product-price {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+.btn-order {
+  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s;
+  font-family: 'Cinzel', serif;
+}
+
+.btn-order:hover {
+  background: linear-gradient(135deg, #0a3d12, #1b5e20);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 500px) {
+  .products-grid { grid-template-columns: 1fr 1fr; }
+}

@@ -1,0 +1,136 @@
+.whyus {
+  background: linear-gradient(160deg, #0a3d12 0%, #1b5e20 60%, #2e7d32 100%);
+  color: #fff;
+  padding: 90px 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.whyus::before {
+  content: '🌿';
+  position: absolute;
+  font-size: 25rem;
+  right: -80px;
+  bottom: -60px;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.whyus-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.whyus-text .tag {
+  display: inline-block;
+  background: rgba(255,215,0,0.2);
+  color: #ffd700;
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 5px 18px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-family: 'Cinzel', serif;
+  border: 1px solid rgba(255,215,0,0.3);
+}
+
+.whyus-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.35;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.whyus-title-ur {
+  font-size: 1.1rem;
+  color: #ffd700;
+  margin-bottom: 22px;
+  display: block;
+}
+
+.whyus-desc {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.78);
+  margin-bottom: 10px;
+}
+
+.whyus-desc-ur {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 30px;
+  display: block;
+}
+
+.cert-badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cert-badges span {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.9);
+}
+
+/* ── FEATURES ── */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.feature-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 22px 18px;
+  display: flex;
+  gap: 14px;
+  transition: all 0.3s;
+}
+
+.feature-card:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-3px);
+}
+
+.feature-icon { font-size: 1.8rem; flex-shrink: 0; }
+
+.feature-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  color: #ffd700;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.feature-ur {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 6px;
+}
+
+.feature-desc {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .whyus-inner { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 500px) {
+  .features-grid { grid-template-columns: 1fr; }
+}

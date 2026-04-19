@@ -1,0 +1,133 @@
+.diseases {
+  background: var(--cream-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.diseases::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1b5e20, #b8860b, #1b5e20);
+}
+
+.disease-img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.section-desc {
+  max-width: 700px;
+  margin: 18px auto 0;
+  color: #555;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.diseases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.disease-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.disease-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.35s ease;
+  transform-origin: left;
+}
+
+.disease-card.hovered {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  border-color: var(--accent);
+}
+
+.disease-card.hovered::before { transform: scaleX(1); }
+
+.card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.disease-card.hovered .card-icon { transform: scale(1.15); }
+
+.card-en {
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.card-ur {
+  font-size: 0.95rem;
+  color: #b8860b;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.card-desc-ur {
+  font-size: 0.82rem;
+  color: #777;
+  margin-bottom: 14px;
+}
+
+.treatment-badge {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  background: rgba(27,94,32,0.06);
+  border: 1px solid rgba(27,94,32,0.12);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  color: #1b5e20;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.card-footer {
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding-top: 12px;
+}
+
+.treated-here {
+  font-size: 0.78rem;
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .diseases-grid { grid-template-columns: 1fr; }
+}

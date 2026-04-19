@@ -1,0 +1,454 @@
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #fefdf8 0%, #e8f5ee 50%, #f0f7ec 100%);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 5% 80px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.06;
+}
+
+.c1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #1b5e20, transparent);
+  top: -200px;
+  right: -100px;
+}
+
+.c2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #b8860b, transparent);
+  bottom: -100px;
+  left: -100px;
+}
+
+.leaf-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 5 Q40 30 30 55 Q20 30 30 5Z' fill='%231b5e20' opacity='0.03'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+.hero-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* ── CONTENT ── */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(27, 94, 32, 0.1), rgba(184, 134, 11, 0.1));
+  border: 1px solid rgba(27, 94, 32, 0.2);
+  color: #1b5e20;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.hakeem-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, rgba(27,94,32,0.08), rgba(184,134,11,0.08));
+  border: 1px solid rgba(27,94,32,0.2);
+  border-radius: 16px;
+  padding: 14px 20px;
+  margin-top: 30px;
+  max-width: 360px;
+  animation: fadeInLeft 0.9s 0.75s ease both;
+}
+
+.hakeem-avatar {
+  font-size: 2.2rem;
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hakeem-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hakeem-title {
+  font-size: 0.7rem;
+  color: #b8860b;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hakeem-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0a3d12;
+}
+
+.hakeem-exp {
+  font-size: 0.72rem;
+  color: #666;
+}
+
+.hero-title-ur {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  color: #0a3d12;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  animation: fadeInLeft 0.9s 0.2s ease both;
+}
+
+.hero-title-ur .highlight {
+  color: #b8860b;
+  position: relative;
+}
+
+.hero-title-en {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  color: #1b5e20;
+  font-weight: 400;
+  margin-bottom: 22px;
+  animation: fadeInLeft 0.9s 0.3s ease both;
+}
+
+.hero-title-en em {
+  color: #b8860b;
+  font-style: italic;
+}
+
+.hero-desc {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 8px;
+  max-width: 500px;
+  animation: fadeInLeft 0.9s 0.4s ease both;
+}
+
+.hero-desc-ur {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 35px;
+  animation: fadeInLeft 0.9s 0.45s ease both;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+  animation: fadeInLeft 0.9s 0.55s ease both;
+}
+
+.btn-outline-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: #1b5e20;
+  border: 2px solid #1b5e20;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-outline-hero:hover {
+  background: #1b5e20;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  animation: fadeInLeft 0.9s 0.65s ease both;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-num {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1b5e20;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.stat-label .urdu {
+  font-size: 0.7rem;
+  color: #b8860b;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* ── HERB ORBIT (fixed) ── */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s 0.3s ease both;
+}
+
+.herb-img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.herb-circle-wrapper {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  flex-shrink: 0;
+}
+
+.herb-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+@keyframes cardOrbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes cardCounter {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 340px;
+  height: 340px;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(27, 94, 32, 0.18);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.center-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: 130px;
+  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 15px rgba(27, 94, 32, 0.08), 0 0 0 30px rgba(27, 94, 32, 0.04);
+  z-index: 2;
+}
+
+.center-icon {
+  font-size: 2.4rem;
+}
+
+.center-text {
+  font-size: 1.05rem;
+  color: #ffd700;
+  margin-top: 4px;
+  font-family: 'Noto Nastaliq Urdu', serif;
+  direction: rtl;
+}
+
+.herb-card {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(27, 94, 32, 0.12);
+  transition: box-shadow 0.3s, transform 0.3s;
+  z-index: 1;
+}
+
+.herb-card:hover {
+  box-shadow: 0 12px 35px rgba(27, 94, 32, 0.22);
+  transform: scale(1.07);
+  z-index: 3;
+}
+
+.herb-emoji {
+  font-size: 1.55rem;
+}
+
+.herb-name {
+  font-size: 0.6rem;
+  color: #1b5e20;
+  font-weight: 700;
+  margin-top: 5px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.herb-ur {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: 0.6rem;
+  color: #b8860b;
+  direction: rtl;
+}
+
+/* Use CSS custom property trick — orbiting parent */
+.herb-circle-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 340px;
+  height: 340px;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(27, 94, 32, 0.15);
+  border-radius: 50%;
+}
+
+.herb-emoji {
+  font-size: 1.6rem;
+}
+
+.herb-name {
+  font-size: 0.65rem;
+  color: #1b5e20;
+  font-weight: 700;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.herb-ur {
+  font-size: 0.65rem;
+  color: #b8860b;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-title-ur,
+  .hero-desc,
+  .hero-desc-ur {
+    text-align: right;
+  }
+
+  .hero-badge {
+    margin: 0 auto 25px;
+  }
+}

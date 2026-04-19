@@ -1,0 +1,39 @@
+.marquee-wrapper {
+  background: linear-gradient(135deg, #0a3d12, #1b5e20);
+  padding: 14px 0;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  border-top: 2px solid rgba(255, 215, 0, 0.3);
+  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 0;
+  animation: scrollLeft 30s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-item {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0 35px;
+  border-right: 1px solid rgba(255, 215, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.marquee-item:nth-child(even) {
+  color: #ffd700;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
