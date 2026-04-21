@@ -176,7 +176,7 @@ export default function Hero({ lang }) {
                     className="herb-card-inner"
                     style={{
                       animation: `cardCounter 18s linear infinite`,
-                    }}
+                    }}  
                   >
                     <img
                       src={h.img}
