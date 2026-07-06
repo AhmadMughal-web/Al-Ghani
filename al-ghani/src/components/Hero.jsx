@@ -53,7 +53,7 @@ export default function Hero({ lang }) {
         <div className="hero-content">
 
           <div className="hero-badge">
-            <span>🌿</span>
+            <span><i className="fas fa-leaf" style={{ color: "#22c55e" }}></i></span>
             <span>
               {isUr
                 ? "خالص جڑی بوٹیاں — ۱۰۰٪ قدرتی"
@@ -89,7 +89,8 @@ export default function Hero({ lang }) {
 
           <div className="hero-cta">
             <a href="#contact" className="btn-primary">
-              📞 {isUr ? "مفت مشورہ کریں" : "Free Consultation — مفت مشورہ"}
+              <i className="fas fa-phone"></i>{" "}
+              {isUr ? "مفت مشورہ کریں" : "Free Consultation — مفت مشورہ"}
             </a>
             <a href="#diseases" className="btn-outline-hero">
               {isUr ? "علاج دیکھیں ←" : "View Treatments →"}
@@ -131,7 +132,9 @@ export default function Hero({ lang }) {
             </div>
           </div>
           <div className="hakeem-box">
-            <div className="hakeem-avatar">👨‍⚕️</div>
+            <div className="hakeem-avatar">
+              <i className="fas fa-user-doctor"></i>
+            </div>
             <div className="hakeem-info">
               <span className="hakeem-title">
                 {isUr ? "ماہر حکیم" : "Expert Hakeem"}
@@ -149,9 +152,11 @@ export default function Hero({ lang }) {
         {/* Right: Herb Orbit */}
         <div className="hero-visual">
           <div className="herb-circle-wrapper">
-            
+
             <div className="center-logo">
-              <div className="center-icon">🌿</div>
+              <div className="center-icon">
+                <i className="fas fa-leaf" style={{ color: "#22c55e" }}></i>
+              </div>
               <div className="center-text urdu">الغنی</div>
             </div>
             {herbs.map((h, i) => {
@@ -176,7 +181,7 @@ export default function Hero({ lang }) {
                     className="herb-card-inner"
                     style={{
                       animation: `cardCounter 18s linear infinite`,
-                    }}  
+                    }}
                   >
                     <img
                       src={h.img}

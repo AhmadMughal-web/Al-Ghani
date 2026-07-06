@@ -32,28 +32,28 @@ export default function ContactSection({ lang }) {
           <h3>{isUr ? "الغنی دواخانہ" : "Al Ghani Dawa Khana"}</h3>
           <div className="info-items">
             <div className="info-item">
-              <span className="info-icon">📍</span>
+              <span className="info-icon"><i className="fas fa-map-marker-alt"></i></span>
               <div>
                 <strong>{isUr ? "پتہ" : "Address"}</strong>
                 <p>{isUr ? "آپ کا پتہ یہاں، لاہور، پاکستان" : "[Your Address], Lahore, Pakistan"}</p>
               </div>
             </div>
             <div className="info-item">
-              <span className="info-icon">📞</span>
+              <span className="info-icon"><i className="fas fa-phone"></i></span>
               <div>
                 <strong>{isUr ? "فون / واٹس ایپ" : "Phone / WhatsApp"}</strong>
                 <p><a href="tel:+923270930991">+92-327-0930991</a></p>
               </div>
             </div>
             <div className="info-item">
-              <span className="info-icon">✉️</span>
+              <span className="info-icon"><i className="fas fa-envelope"></i></span>
               <div>
                 <strong>{isUr ? "ای میل" : "Email"}</strong>
                 <p><a href="mailto:mailto:hakeemwaheedahmadghani@gmail.com">info@mailto:hakeemwaheedahmadghani@gmail.com</a></p>
               </div>
             </div>
             <div className="info-item">
-              <span className="info-icon">🕐</span>
+              <span className="info-icon"><i className="fas fa-clock"></i></span>
               <div>
                 <strong>{isUr ? "اوقات" : "Hours"}</strong>
                 <p>{isUr ? "پیر تا ہفتہ: صبح ۹ — شام ۸" : "Mon–Sat: 9:00 AM – 8:00 PM"}</p>
@@ -73,9 +73,7 @@ export default function ContactSection({ lang }) {
               </svg>
               WhatsApp
             </a>
-            <a href="tel:+923270930991" className="social-btn call">
-              📞 {isUr ? "ابھی کال کریں" : "Call Now"}
-            </a>
+            
           </div>
         </div>
 
@@ -83,7 +81,7 @@ export default function ContactSection({ lang }) {
         <div className="contact-form-wrapper">
           {submitted ? (
             <div className="success-msg">
-              <span>✅</span>
+              <span><i className="fas fa-check-circle"></i></span>
               <h3>{isUr ? "مشورہ بک ہو گیا!" : "Consultation Booked!"}</h3>
               <p>{isUr ? "شکریہ! ہم ۲۴ گھنٹے میں آپ سے رابطہ کریں گے۔" : "Thank you! We will contact you within 24 hours."}</p>
               <button className="btn-primary" onClick={() => { setSubmitted(false); setForm({ name: "", phone: "", email: "", disease: "", message: "" }); }}>
@@ -119,7 +117,17 @@ export default function ContactSection({ lang }) {
                 <textarea name="message" value={form.message} onChange={handle} rows={4} placeholder={isUr ? "اپنی تکلیف بیان کریں..." : "Describe your condition..."} />
               </div>
               <button type="submit" className="btn-primary submit-btn" disabled={loading}>
-                {loading ? (isUr ? "⏳ بھیجا جا رہا ہے..." : "⏳ Sending...") : (isUr ? "📨 مشورہ بھیجیں" : "📨 Send Consultation Request")}
+                {loading ? (
+                  <>
+                    <i className="fas fa-spinner fa-spin"></i>{" "}
+                    {isUr ? "بھیجا جا رہا ہے..." : "Sending..."}
+                  </>
+                ) : (
+                  <>
+                    <i className="fas fa-paper-plane"></i>{" "}
+                    {isUr ? "مشورہ بھیجیں" : "Send Consultation Request"}
+                  </>
+                )}
               </button>
             </form>
           )}

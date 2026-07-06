@@ -34,8 +34,8 @@ export default function Header({ activeNav, setActiveNav, lang, setLang }) {
       <div className="topbar">
         <div className="topbar-inner">
           <div className="topbar-left">
-            <span>📞 <a href="tel:+923270930991">+92-327-0930991</a></span>
-            <span>✉️ <a href="mailto:hakeemwaheedahmadghani@gmail.com">info@hakeemwaheedahmadghani@gmail.com</a></span>
+            <span><i className="fas fa-phone"></i> <a href="tel:+923270930991">+92-327-0930991</a></span>
+            <span><i className="fas fa-envelope"></i> <a href="mailto:hakeemwaheedahmadghani@gmail.com">info@hakeemwaheedahmadghani@gmail.com</a></span>
           </div>
           <div className="topbar-right">
             <span className="urdu-small">یونانی و ہربل طب</span>
@@ -104,7 +104,7 @@ export default function Header({ activeNav, setActiveNav, lang, setLang }) {
             </div>
 
             <button className="nav-cta btn-primary" onClick={() => go("contact")}>
-              📞 {isUr ? "ابھی مشورہ" : "Consult Now"}
+              <i className="fas fa-phone"></i> {isUr ? "ابھی مشورہ" : "Consult Now"}
             </button>
           </nav>
 
@@ -134,7 +134,7 @@ export default function Header({ activeNav, setActiveNav, lang, setLang }) {
             </button>
           ))}
           <button className="btn-primary mobile-cta" onClick={() => go("contact")}>
-            📞 {isUr ? "ابھی مشورہ کریں" : "Consult Now"}
+            <i className="fas fa-phone"></i> {isUr ? "ابھی مشورہ کریں" : "Consult Now"}
           </button>
         </div>
       </header>

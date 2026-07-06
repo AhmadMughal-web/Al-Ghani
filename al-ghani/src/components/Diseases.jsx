@@ -153,12 +153,12 @@ export default function Diseases({ lang }) {
               </h3>
               <p className="card-desc">{isUr ? d.urDesc : d.desc}</p>
               <div className="treatment-badge">
-                <span>💊</span>
+                <span><i className="fas fa-pills"></i></span>
                 <span>{isUr ? d.treatmentUr : d.treatment}</span>
               </div>
               <div className="card-footer">
                 <span className="treated-here">
-                  ✅ {isUr ? "یہاں علاج ہوتا ہے" : "Treated Here"}
+                  <i className="fas fa-check-circle"></i> {isUr ? "یہاں علاج ہوتا ہے" : "Treated Here"}
                 </span>
               </div>
             </div>

@@ -39,7 +39,11 @@ export default function Testimonials({ lang }) {
 
       <div className="testi-wrapper">
         <div className="testi-card">
-          <div className="stars">{"⭐".repeat(t.stars)}</div>
+          <div className="stars">
+            {Array.from({ length: t.stars }).map((_, i) => (
+              <i key={i} className="fas fa-star" style={{ color: "#FFD700" }}></i>
+            ))}
+          </div>
           <blockquote className="testi-text">
             "{isUr ? t.textUr : t.textEn}"
           </blockquote>
