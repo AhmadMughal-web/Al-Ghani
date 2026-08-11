@@ -57,14 +57,16 @@ export default function Hero({ lang }) {
             <span>
               {isUr
                 ? "خالص جڑی بوٹیاں — ۱۰۰٪ قدرتی"
-                : "100% Natural Herbal Medicines — خالص جڑی بوٹیاں"}
+                : "100% Natural Herbal Medicines"}
             </span>
           </div>
 
-          <h1 className="hero-title-ur urdu">
-            قدرتی علاج، <br />
-            <span className="highlight">صحت مند زندگی</span>
-          </h1>
+          {isUr && (
+            <h1 className="hero-title-ur urdu">
+              قدرتی علاج، <br />
+              <span className="highlight">صحت مند زندگی</span>
+            </h1>
+          )}
 
           {!isUr && (
             <h2 className="hero-title-en">
@@ -81,16 +83,16 @@ export default function Hero({ lang }) {
             </p>
           )}
 
-          <p className="hero-desc-ur urdu">
-            {isUr
-              ? "الغنی دواخانہ — لاہور کا سب سے قابل اعتماد یونانی و ہربل دواخانہ۔ ۲۵ سال سے زائد کا تجربہ اور ہزاروں مطمئن مریض۔"
-              : "الغنی دواخانہ — یونانی اور ہربل ادویات میں ۲۵ سال سے زائد کا تجربہ"}
-          </p>
+          {isUr && (
+            <p className="hero-desc-ur urdu">
+              الغنی دواخانہ — لاہور کا سب سے قابل اعتماد یونانی و ہربل دواخانہ۔ ۲۵ سال سے زائد کا تجربہ اور ہزاروں مطمئن مریض۔
+            </p>
+          )}
 
           <div className="hero-cta">
             <a href="#contact" className="btn-primary">
               <i className="fas fa-phone"></i>{" "}
-              {isUr ? "مفت مشورہ کریں" : "Free Consultation — مفت مشورہ"}
+              {isUr ? "مفت مشورہ کریں" : "Free Consultation"}
             </a>
             <a href="#diseases" className="btn-outline-hero">
               {isUr ? "علاج دیکھیں ←" : "View Treatments →"}
@@ -104,7 +106,7 @@ export default function Hero({ lang }) {
                 {isUr ? (
                   <span className="urdu">سال تجربہ</span>
                 ) : (
-                  <>Years<br /><span className="urdu">سال تجربہ</span></>
+                  "Years"
                 )}
               </span>
             </div>
@@ -115,7 +117,7 @@ export default function Hero({ lang }) {
                 {isUr ? (
                   <span className="urdu">مریض</span>
                 ) : (
-                  <>Patients<br /><span className="urdu">مریض</span></>
+                  "Patients"
                 )}
               </span>
             </div>
@@ -126,7 +128,7 @@ export default function Hero({ lang }) {
                 {isUr ? (
                   <span className="urdu">ادویات</span>
                 ) : (
-                  <>Medicines<br /><span className="urdu">ادویات</span></>
+                  "Medicines"
                 )}
               </span>
             </div>
@@ -157,7 +159,9 @@ export default function Hero({ lang }) {
               <div className="center-icon">
                 <i className="fas fa-leaf" style={{ color: "#22c55e" }}></i>
               </div>
-              <div className="center-text urdu">الغنی</div>
+              <div className={`center-text ${isUr ? "urdu" : ""}`}>
+                {isUr ? "الغنی" : "Al Ghani"}
+              </div>
             </div>
             {herbs.map((h, i) => {
               const deg = (360 / herbs.length) * i - 90;

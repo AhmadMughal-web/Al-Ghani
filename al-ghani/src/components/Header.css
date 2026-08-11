@@ -1,43 +1,4 @@
-.topbar {
-  background: linear-gradient(135deg, #0a3d12, #1b5e20);
-  padding: 8px 5%;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.85);
-  border-bottom: 1px solid rgba(255, 215, 0, 0.25);
-  background: linear-gradient(135deg, #0a3d12, #1b5e20);
-  padding: 8px 5%;
-  width: 100%;
-  overflow-x: hidden;
-}
 
-.topbar-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1300px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.topbar-left,
-.topbar-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.topbar-left a,
-.topbar-right a {
-  color: rgba(255, 255, 255, 0.85);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.topbar-left a:hover {
-  color: #ffd700;
-}
 
 .urdu-small {
   font-family: 'Noto Nastaliq Urdu', serif;
@@ -73,15 +34,15 @@
 
 /* ── MAIN HEADER ── */
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   background: rgba(255, 254, 248, 0.96);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(27, 94, 32, 0.12);
   transition: all 0.3s;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 .header.scrolled {
